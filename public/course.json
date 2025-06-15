@@ -1,97 +1,99 @@
 [
   {
-    "folderName": "introduction & Essentials",
-    "folderVideos": [
+    "section": "Introduction & Essentials",
+    "videos": [
       {
-        "videoName": "video1",
-        "videoTitle": "important info",
-        "videoDescription": "This video provides an overview of the course structure and objectives.",
-        "videoLink": "https://drive.google.com/file/d/1C6DwHF0U9GN0YyTEDFr4rZgo_xhJCBC-"
+        "title": "Important Info",
+        "description": "Overview of the course structure and objectives.",
+        "link": "https://drive.google.com/file/d/1C6DwHF0U9GN0YyTEDFr4rZgo_xhJCBC-/preview"
       },
       {
-        "videoName": "video2",
-        "videoTitle": "introduction to the course",
-        "videoDescription": "Learn how to set up your development environment for the course.",
-        "videoLink": "https://drive.google.com/file/d/1JDmM6Coz5A6UmuKPzvD4dzZ0mhk3y4sK"
-      },
+        "title": "Introduction to the Course",
+        "description": "Learn how to set up your development environment for the course.",
+        "link": "https://drive.google.com/file/d/1JDmM6Coz5A6UmuKPzvD4dzZ0mhk3y4sK/preview"
+      }
+    ],
+    "documents": [
       {
-        "pdfName": "pdf1",
-        "pdfTitle": "course syllabus",
-        "pdfDescription": "Download the course syllabus to understand the topics covered and the schedule.",
-        "pdfLink": "https://drive.google.com/file/d/1xi70_6w43V6KGnE-0kd7U5XPQANZ-v66/view?usp=drive_link"
+        "title": "Course Syllabus",
+        "description": "Understand the topics covered and the schedule.",
+        "link": "https://drive.google.com/file/d/1xi70_6w43V6KGnE-0kd7U5XPQANZ-v66/preview"
       }
     ]
   },
   {
-    "folderName": "Advanced Vocabulary Section",
-    "folderVideos": [
+    "section": "Complete Vocabulary & Parts of Speech",
+    "videos": [
       {
-        "videoName": "video3",
-        "videoTitle": "Abstract Nouns.mp4",
-        "videoDescription": "This video covers the concept of abstract nouns, their usage, and examples.",
-        "videoLink": "https://drive.google.com/file/d/1sA2OxmUwnEZ0dmRc-3A2p3Nwe_wK5qno"
+        "title": "Adjectives Structures",
+        "description": "Explains various adjective structures and their applications in English writing.",
+        "link": "https://drive.google.com/file/d/1tgcxnMT4m17OglTJuSrAbfaN-0Psxpei/preview"
       },
       {
-        "videoName": "video4",
-        "videoTitle": "Action Verbs.mp4",
-        "videoDescription": "Learn about action verbs, their forms, and how to use them effectively in sentences.",
-        "videoLink": "https://drive.google.com/file/d/1-XPwm05YGlJqTwS26WprjTj8pGl1fROg"
-      },
-      {
-        "videoName": "video5",
-        "videoTitle": "Descriptive Adjectives.mp4",
-        "videoDescription": "This video explains descriptive adjectives, their importance, and how to use them to enhance writing.",
-        "videoLink": "https://drive.google.com/file/d/1fiMdRSbMZ5s4PFhwIB5aa46aGfcTXDGy"
+        "title": "Untitled Video",
+        "description": "No description available.",
+        "link": ""
       }
     ]
   },
   {
-    "folderName": "Advanced Writing Section",
-    "folderVideos": [
-        {
-        "videoName": "video6",
-        "videoTitle": "Advanced English Writing Class.mp4",
-        "videoDescription": "This video focuses on advanced writing techniques, including structure and style.",
-        "videoLink": "https://drive.google.com/file/d/19UlLV6fFd9rw8MQrPbPZ42xZBnXSVyDf"
-        },
-        {
-        "videoName": "video7",
-        "videoTitle": "Complex + Compound Sentences for Advanced Writing.mp4",
-        "videoDescription": "Learn how to construct complex and compound sentences to improve your writing skills.",
-        "videoLink": "https://drive.google.com/file/d/1AxU0fEHxPBa298VymylpCWjo8zFWt-Un"
-        },
-        {
-        "videoName": "video8",
-        "videoTitle": "Phrasal Verbs for Advanced English Writing.mp4",
-        "videoDescription": "This video covers the use of phrasal verbs in advanced English writing, enhancing your vocabulary.",
-        "videoLink": "https://drive.google.com/file/d/1j56i1PFeF_AIMAuG_UvUQWke7DqCflEl"
-        }
+    "section": "Advanced Vocabulary Section",
+    "videos": [
+      {
+        "title": "Abstract Nouns",
+        "description": "Concept, usage, and examples of abstract nouns.",
+        "link": "https://drive.google.com/file/d/1sA2OxmUwnEZ0dmRc-3A2p3Nwe_wK5qno/preview"
+      },
+      {
+        "title": "Action Verbs",
+        "description": "Forms and effective usage in sentences.",
+        "link": "https://drive.google.com/file/d/1-XPwm05YGlJqTwS26WprjTj8pGl1fROg/preview"
+      },
+      {
+        "title": "Descriptive Adjectives",
+        "description": "Importance and enhancement of writing with descriptive adjectives.",
+        "link": "https://drive.google.com/file/d/1fiMdRSbMZ5s4PFhwIB5aa46aGfcTXDGy/preview"
+      }
     ]
   },
   {
-    "folderName": "Books + APPs for English Learning",
-    "folderVideos": [
-        {
-        "videoName": "video9",
-        "videoTitle": "Books + APPs for English Learning.mp4",
-        "videoDescription": "Discover the best books and apps for enhancing your English learning experience.",
-        "videoLink": "https://drive.google.com/file/d/1-F4Ku22ju5Jwztwo7iIe81zpi19q-ZLK"
-        }
+    "section": "Advanced Writing Section",
+    "videos": [
+      {
+        "title": "Advanced English Writing Class",
+        "description": "Focus on advanced writing techniques, structure, and style.",
+        "link": "https://drive.google.com/file/d/19UlLV6fFd9rw8MQrPbPZ42xZBnXSVyDf/preview"
+      },
+      {
+        "title": "Complex & Compound Sentences for Advanced Writing",
+        "description": "Constructing complex and compound sentences to improve writing.",
+        "link": "https://drive.google.com/file/d/1AxU0fEHxPBa298VymylpCWjo8zFWt-Un/preview"
+      },
+      {
+        "title": "Phrasal Verbs for Advanced English Writing",
+        "description": "Using phrasal verbs effectively in writing.",
+        "link": "https://drive.google.com/file/d/1j56i1PFeF_AIMAuG_UvUQWke7DqCflEl/preview"
+      }
     ]
-      
   },
   {
-    "folderName": "Complete Vocabulary Section & Parts Of Speech",
-    "folderVideos": [
-        {
-        "videoName": "video10",
-        "videoTitle": "Adjectives Structures.mp4",
-        "videoDescription": "This video explains various adjective structures and their applications in English writing.",
-        "videoLink": "https://drive.google.com/file/d/1tgcxnMT4m17OglTJuSrAbfaN-0Psxpei"
-        },
-        {
-        "videoName": "video11"
-        }
+    "section": "Recommended Books & Apps",
+    "videos": [
+      {
+        "title": "Books + Apps for English Learning",
+        "description": "Top resources to support your English learning journey.",
+        "link": "https://drive.google.com/file/d/1-F4Ku22ju5Jwztwo7iIe81zpi19q-ZLK/preview"
+      }
+    ]
+  },
+  {
+    "section": "Course Ending",
+    "videos": [
+      {
+        "title": "Thank You & Goodbye!",
+        "description": "Concluding thoughts, gratitude, and course summary.",
+        "link": "https://drive.google.com/file/d/1mxNps6MLjPEpTNXxu8ppT_NYMT_2gBbo/preview"
+      }
     ]
   }
 ]
