@@ -24,7 +24,8 @@ const Banner = () => {
       {/* Header */}
       <header className="bg-gradient-to-r from-blue-600 to-indigo-600 text-white p-6 text-center shadow-md">
         <h1 className="text-3xl font-bold tracking-wide">🎓 My Course Platform</h1>
-        <p className="text-sm mt-1">Learn and Grow at Your Own Pace</p>
+        <p className="text-sm mt-1">Learn and Grow at Your Own Pace </p>
+        <p>kausar</p>
       </header>
 
       {/* Mobile Folder Icon Button */}
