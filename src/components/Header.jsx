@@ -1,3 +1,5 @@
+"use client";
+
 
 import React, {useState} from "react";
 
@@ -14,6 +16,7 @@ import { FiUser } from "react-icons/fi";
 import { IoSettingsOutline } from "react-icons/io5";
 import { Button } from "./ui/button";
 import { ModeToggle } from "./theme/ModeToggle";
+import Link from "next/link";
 
 const Header = () => {
   const [accountMenuOpen, setAccountMenuOpen] = useState(false);
@@ -24,7 +27,7 @@ const Header = () => {
 
   return (
     <section className="">
-      <nav className="flex items-center justify-between w-full relative max-w-10/12 mx-auto py-8 ">
+      <nav className="flex items-center justify-between w-full relative max-w-11/12 mx-auto py-8 ">
         {/* logo */}
         <img
           src="https://i.ibb.co/0BZfPq6/darklogo.png"
@@ -34,14 +37,13 @@ const Header = () => {
 
         {/* nav links */}
 
-        <div className="flex items-center ">
+        <div className="flex items-center gap-8 cursor-pointer">
           <ul className="flex gap-6">
-            <li>Home</li>
+            <Link href="/">Home</Link>
             <li>Course Details</li>
             <li>Support</li>
-            <li>Support</li>
+            <Link href="/dashboard"> Dashboard</Link>
             <li>Blog</li>
-            <li>Helpdesk</li>
             <li>My Classes</li>
           </ul>
           <ModeToggle></ModeToggle>
