@@ -1,4 +1,5 @@
-import Banner from '@/components/Banner'
+ 
+import Dashboard from '@/components/dashboard/Dashboard'
 import Header from '@/components/Header'
 import React from 'react'
 
@@ -6,7 +7,7 @@ const page = () => {
   return (
     <div>
       <Header/>
-      <Banner/>
+      <Dashboard></Dashboard>
     </div>
   )
 }
