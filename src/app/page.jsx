@@ -1,10 +1,10 @@
 
-import Dashboard from '@/components/dashboard/Dashboard'
+import Banner from '@/layout/Banner'
 
 const page = () => {
   return (
     <div>
-      <Dashboard />
+      <Banner />
     </div>
   )
 }
