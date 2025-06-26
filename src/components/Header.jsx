@@ -1,5 +1,5 @@
-"use client";
-import React, { useState } from "react";
+
+import React, {useState} from "react";
 
 // react icons
 import { IoIosArrowDown, IoIosArrowUp } from "react-icons/io";
