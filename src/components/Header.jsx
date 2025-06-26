@@ -30,9 +30,9 @@ const Header = () => {
       <nav className="flex items-center justify-between w-full relative max-w-11/12 mx-auto py-8 ">
         {/* logo */}
         <img
-          src="https://i.ibb.co/0BZfPq6/darklogo.png"
+          src="/Upskillify.png"
           alt="logo"
-          className="w-[55px] "
+          className="w-[150px] "
         />
 
         {/* nav links */}
