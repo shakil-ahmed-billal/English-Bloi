@@ -1,5 +1,5 @@
 
-import Banner from '@/layout/Banner'
+import Banner from '@/components/Home/Banner'
 
 const page = () => {
   return (
