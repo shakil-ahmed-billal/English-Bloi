@@ -16,7 +16,7 @@ const Dashboard = () => {
     return (
         <div className="w-full mx-auto px-4 sm:px-6 lg:px-20">
             {/* Heading */}
-            <h1 className="text-3xl md:text-4xl font-bold mb-8 text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-cyan-400">
+            <h1 className="text-3xl md:text-4xl font-bold md:my-8 my-4 text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-cyan-400">
                 Welcome back, Shakil Ahmed Billal 👋 <br />
                 Ready for your next lesson?
             </h1>
