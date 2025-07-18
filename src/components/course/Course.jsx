@@ -1,19 +1,18 @@
 "use client";
 
 import { useState } from "react";
-import { FaFolderOpen } from "react-icons/fa";
-import { FiChevronDown, FiChevronRight, FiArrowLeft, FiCheckCircle, FiSearch } from "react-icons/fi";
+import { FiArrowLeft, FiCheckCircle, FiChevronDown, FiChevronRight, FiSearch } from "react-icons/fi";
 import course from "../../../public/course.json";
-import Player from "../videos/Player";
 import { Button } from "../ui/button";
-import { Dialog, DialogContent } from "../ui/dialog";
 import { Card, CardContent } from "../ui/card";
+import { Dialog, DialogContent } from "../ui/dialog";
+import Player from "../videos/Player";
 
 const getTotalLessons = (course) => course.reduce((acc, sec) => acc + sec.videos.length, 0);
 const getCompletedLessons = (course) => 0; // Placeholder, implement completion logic as needed
 
 const Course = () => {
-  const [videoUrl, setVideoUrl] = useState(null);
+  const [videoInfo, setVideo] = useState(null);
   const [activeIndex, setActiveIndex] = useState(null);
   const [isMobileDrawerOpen, setIsMobileDrawerOpen] = useState(false);
   const [search, setSearch] = useState("");
@@ -29,8 +28,9 @@ const Course = () => {
     setActiveIndex((prev) => (prev === index ? null : index));
   };
 
-  const handleVideoSelect = (url) => {
-    setVideoUrl(url);
+  const handleVideoSelect = (info) => {
+    console.log("Selected Video Info:", info);
+    setVideo(info);
     setIsMobileDrawerOpen(false);
   };
 
@@ -39,17 +39,17 @@ const Course = () => {
     <Card className={`rounded-2xl shadow-xl bg-[#18122B]/80 dark:bg-[#232136] border-0 ${isMobile ? '' : 'p-0'} w-full h-full`}>
       <CardContent className={isMobile ? 'p-0' : 'p-0'}>
         {/* Progress Bar */}
-        <div className="px-4 pt-4 pb-2 sticky top-0 z-10 bg-[#18122B]/80 dark:bg-[#232136] rounded-t-2xl">
+        <div className="pr-4 pl-3 pt-4 pb-2 sticky top-0 z-10 bg-[#18122B]/80 dark:bg-[#232136] rounded-t-2xl">
           <div className="flex items-center justify-between mb-2">
             <span className="text-sm text-gray-200 font-medium">Running Module : {activeIndex !== null ? activeIndex + 1 : 1}</span>
             <span className="text-xs text-green-400 font-bold">{completedLessons}/{totalLessons}</span>
           </div>
-          <div className="w-full h-2 bg-fuchsia-900/30 rounded-full overflow-hidden">
+          <div className="w-full h-1 bg-fuchsia-900/30 rounded-full overflow-hidden">
             <div className="h-2 bg-gradient-to-r from-fuchsia-500 to-green-400 rounded-full transition-all" style={{ width: `${(completedLessons / totalLessons) * 100 || 0}%` }}></div>
           </div>
         </div>
         {/* Search Bar */}
-        <div className="px-4 py-2 sticky top-12 z-10 bg-[#18122B]/80 dark:bg-[#232136]">
+        <div className="pr-4 pl-2 py-2 sticky top-12 z-10 bg-[#18122B]/80 dark:bg-[#232136]">
           <div className="flex items-center gap-2 bg-fuchsia-900/20 rounded-lg px-3 py-2">
             <FiSearch className="text-fuchsia-400" />
             <input
@@ -62,7 +62,7 @@ const Course = () => {
           </div>
         </div>
         {/* Lessons List */}
-        <nav className="flex flex-col gap-4 px-2 pb-4 overflow-y-auto custom-scrollbar" style={{ maxHeight: isMobile ? '60vh' : '70vh' }}>
+        <nav className="flex flex-col gap-4 px-2 pb-4 overflow-y-auto custom-scrollbar" style={{ maxHeight: isMobile ? '85vh' : '85vh' }}>
           {course.map((section, index) => {
             const isActive = activeIndex === index;
             const filteredVideos = section.videos.filter(v => v.title.toLowerCase().includes(search.toLowerCase()));
@@ -91,7 +91,7 @@ const Course = () => {
                       {filteredVideos.map((video, vidIdx) => (
                         <li
                           key={vidIdx}
-                          onClick={() => handleVideoSelect(video.link)}
+                          onClick={() => handleVideoSelect(video)}
                           className="cursor-pointer flex items-center gap-2 text-sm px-3 py-2 rounded-lg text-fuchsia-100 hover:bg-fuchsia-800/60 hover:text-green-300 transition"
                         >
                           <FiCheckCircle className="text-green-400" /> {video.title}
@@ -109,24 +109,25 @@ const Course = () => {
   );
 
   return (
-    <div className="min-h-screen bg-[#18122B] dark:bg-[#18122B] transition-colors">
+    <div className="min-h-screen bg-[#18122B] dark:bg-[#18122B] transition-colors ">
       {/* Top Header */}
-      <header className="sticky top-0 z-30 w-full bg-[#18122B] dark:bg-[#18122B] px-6 py-4 flex items-center gap-4 border-b border-fuchsia-900/40">
+      <header className="top-0 z-30 w-11/12 mx-auto bg-[#18122B] dark:bg-[#18122B] flex items-center gap-4 border-b border-fuchsia-900/40">
         <Button variant="ghost" size="icon" className="text-fuchsia-400 hover:bg-fuchsia-900/30">
           <FiArrowLeft size={22} />
         </Button>
-        <h1 className="text-lg md:text-xl font-bold text-fuchsia-200 tracking-tight">{currentSection?.section || "Course Title"}</h1>
+        <h1 className="text-lg md:text-xl font-bold text-fuchsia-200 tracking-tight py-5 ">{currentSection?.section || "Course Title"}</h1>
       </header>
 
-      <div className="w-full max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-8 pt-6 px-2 md:px-6">
+      <div className="w-full max-w-11/12 mx-auto grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-8 py-10">
         {/* Video Section */}
         <main className="md:col-span-2 lg:col-span-3 flex flex-col gap-6">
-          <Card className="rounded-2xl shadow-xl bg-[#232136] border-0">
+          <Card className="rounded-2xl shadow-xl bg-[#232136] border-0 px-5">
             <CardContent className="p-0">
               <div className="flex flex-col items-center">
-                {videoUrl ? (
+                {videoInfo ? (
                   <div className="w-full aspect-video rounded-t-2xl overflow-hidden">
-                    <Player videoUrl={videoUrl} />
+                    <Player videoFile={videoInfo} />
+                    
                   </div>
                 ) : (
                   <div className="flex flex-col items-center justify-center w-full aspect-video rounded-t-2xl bg-gradient-to-br from-fuchsia-900 via-fuchsia-800 to-fuchsia-700 text-fuchsia-200 text-xl font-semibold">
@@ -134,13 +135,17 @@ const Course = () => {
                     Select a video from the course folder to start learning.
                   </div>
                 )}
+                <div className="w-full">
+                      <h2 className="text-xl font-semibold text-fuchsia-200 mt-4">{videoInfo?.title || "No title available."}</h2>
+                      <p className="text-sm text-fuchsia-400 mt-1">{videoInfo?.description || "No description available."}</p>
+                    </div>
               </div>
             </CardContent>
           </Card>
         </main>
 
         {/* Sidebar */}
-        <aside className="hidden md:block md:col-span-1 h-[80vh] max-h-[80vh] overflow-y-auto custom-scrollbar">
+        <aside className="hidden md:block md:col-span-1 h-[100vh] max-h-[100vh] overflow-y-auto custom-scrollbar">
           <Sidebar />
         </aside>
       </div>
