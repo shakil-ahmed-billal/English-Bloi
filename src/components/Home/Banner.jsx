@@ -5,7 +5,7 @@ import Link from 'next/link';
 
 const Banner = () => {
   return (
-    <div className="w-full mx-auto py-10 bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 dark:bg-gradient-to-r dark:from-gray-800 dark:via-gray-700 dark:to-black transition-all duration-300">
+    <div className="w-full mx-auto px-10 py-10 bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 dark:bg-gradient-to-r dark:from-gray-800 dark:via-gray-700 dark:to-black transition-all duration-300">
       <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-10">
         
         {/* Text Section */}
