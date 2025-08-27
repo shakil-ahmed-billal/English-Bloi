@@ -89,8 +89,8 @@ const Home = () => {
             </div>
 
             {/* Hero Image/Video */}
-            <div className="relative w-10/12 flex justify-end">
-              <div className="relative bg-white/10 backdrop-blur-md rounded-3xl p-8 border border-white/20">
+            <div className="relative w-10/12 flex mx-auto  align-items-end justify-end">
+              <div className="relative bg-white/10 backdrop-blur-md rounded-3xl p-8 border border-white/20 flex   align-items-end justify-end">
                 <img 
                   src="/image/image-1.webp" 
                   alt="Learning Platform Preview" 
